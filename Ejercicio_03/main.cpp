@@ -2,22 +2,21 @@
 
 using namespace std;
 
-int factorial(int numero){
 
-    int resultado = 1;
+int factorialRecursivo(int numero){
     
-    for (int i = 1; i <= numero; i++){
-        resultado = resultado * i;
+    if (numero == 1){
+        return 1;
     }
     
-    return resultado;
+    return numero * factorialRecursivo(numero - 1);
     
 }
 
 int main()
 {
 
-    cout << "Factorial: " << factorial(5) << endl;
+    cout << "Factorial: " << factorialRecursivo(5) << endl;
     
 
 }
